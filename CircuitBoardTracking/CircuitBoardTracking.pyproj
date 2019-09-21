@@ -1,0 +1,57 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>6d552a67-4916-476c-a511-62694bf7e195</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>simple-object-tracking\object_tracker.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>CircuitBoardTracking</Name>
+    <RootNamespace>CircuitBoardTracking</RootNamespace>
+    <InterpreterId>
+    </InterpreterId>
+    <SuppressEnvironmentCreationPrompt>True</SuppressEnvironmentCreationPrompt>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="CircuitBoardTracking.py" />
+    <Compile Include="simple-object-tracking\object_tracker.py" />
+    <Compile Include="simple-object-tracking\pyimagesearch\centroidtracker.py" />
+    <Compile Include="simple-object-tracking\pyimagesearch\__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="simple-object-tracking\" />
+    <Folder Include="simple-object-tracking\.vs\" />
+    <Folder Include="simple-object-tracking\.vs\simple-object-tracking\" />
+    <Folder Include="simple-object-tracking\.vs\simple-object-tracking\v16\" />
+    <Folder Include="simple-object-tracking\pyimagesearch\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="requirements.txt" />
+    <Content Include="simple-object-tracking\.vs\ProjectSettings.json" />
+    <Content Include="simple-object-tracking\.vs\simple-object-tracking\v16\.suo" />
+    <Content Include="simple-object-tracking\.vs\slnx.sqlite" />
+    <Content Include="simple-object-tracking\.vs\VSWorkspaceState.json" />
+    <Content Include="simple-object-tracking\deploy.prototxt" />
+    <Content Include="simple-object-tracking\res10_300x300_ssd_iter_140000.caffemodel" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
